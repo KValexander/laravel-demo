@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 09 2021 г., 15:29
+-- Время создания: Май 10 2021 г., 08:31
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.3.17
 
@@ -50,7 +50,8 @@ INSERT INTO `applications` (`application_id`, `user_id`, `title`, `description`,
 (6, 1, 'Третья заявка', 'Описание', 'Первая категория', 'images/before/1_1620560842_854668496.jpg', 'images/after/1_1620560950_122910768.jpg', 'Решена', NULL, '2021-05-09 14:47:22'),
 (7, 1, 'Четвёртая заявка', 'Описание', 'Вторая категория', 'images/before/1_1620560911_796997101.jpg', 'images/after/1_1620560933_825494493.jpg', 'Решена', NULL, '2021-05-09 14:48:31'),
 (8, 1, 'Пятая заявка', 'Описание', 'Первая категория', 'images/before/1_1620560995_616813417.jpg', NULL, 'Отклонена', 'Отклоняем', '2021-05-09 14:49:55'),
-(9, 1, 'Шестая заявка', 'Описание', 'Вторая категория', 'images/before/1_1620561051_1948760763.jpg', NULL, 'Отклонена', 'Отклоняем', '2021-05-09 14:50:51');
+(9, 1, 'Шестая заявка', 'Описание', 'Вторая категория', 'images/before/1_1620561051_1948760763.jpg', NULL, 'Отклонена', 'Отклоняем', '2021-05-09 14:50:51'),
+(13, 2, 'Заявка', 'Описание', 'Вторая категория', 'images/before/1_1620624577_1827537766.jpg', 'images/after/1_1620624603_1600484341.jpg', 'Решена', NULL, '2021-05-10 08:29:37');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fio`, `login`, `email`, `password`, `remember_token`, `role`) VALUES
 (1, 'Александр', 'ewoase', '1@1', '$2y$10$9lKdUfmsTd5XOyH0zfkWweeOF/aMKGrkvyQL6mF9/NuSwkNDh3LfW', 'KAd0FKJ4lZHPQIzS13urHWlffXiEmxgld2CdOvTsfEQuiZC6LHsjhwSCPFw2', 'admin'),
-(2, 'Администратор', 'admin', '2@2', '$2y$10$cYOlIvzFaTZbcjaGRr9QzuNYYRKEombZ1UAVf7SzOVfvBn79oUsku', 'CLBI9MWrtbs0xNrq6oGFktO19HulUz6lSdWkgMhVeVwzVpn8Jk8XkzSlDINT', 'user');
+(2, 'Администратор', 'admin', '2@2', '$2y$10$cYOlIvzFaTZbcjaGRr9QzuNYYRKEombZ1UAVf7SzOVfvBn79oUsku', 'CLBI9MWrtbs0xNrq6oGFktO19HulUz6lSdWkgMhVeVwzVpn8Jk8XkzSlDINT', 'admin');
 
 --
 -- Индексы сохранённых таблиц
@@ -125,7 +126,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `category`

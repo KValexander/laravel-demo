@@ -29,9 +29,13 @@ class MainController extends Controller
     		->limit(4)
     		->get();
 
+        // Получение количества всех решённых заявок
+        $count = DB::table("applications")->where("status", "=", "Решена")->count();
+
     	// Составление объекта
     	$data = (object)[
-    		"applications" => $app
+    		"applications" => $app,
+            "count" => $count
     	];
 
     	// Возвращение данных
